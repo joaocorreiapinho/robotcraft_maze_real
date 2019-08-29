@@ -100,6 +100,7 @@ private:
                                 init_flag = true;
                             }
                             msg.angular.z = 0.0;
+                            number = 0;
                             break;       // and exits the switch
 
             case 1 :        // PI controller
@@ -129,6 +130,7 @@ private:
                             msg.linear.x = desired_linear_velocity;
 
                             ROS_INFO("Case PID");
+                            number = 1;
                             break;
 
             case 2 :        // Avoidance manuever
@@ -139,6 +141,7 @@ private:
                             integral_error = 0;
 
                             ROS_INFO("Case MANUEVER");
+                            number = 2;
                             break;
                             
             }
